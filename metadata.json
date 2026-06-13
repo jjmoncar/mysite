@@ -1,0 +1,6 @@
+{
+  "name": "Curelytics Portfolio",
+  "description": "Portfólio interativo de alta tecnologia e consultoria de design e inteligência artificial da Curelytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
