@@ -14,7 +14,8 @@ import {
   ExternalLink,
   MessageSquare,
   Shield,
-  Code
+  Code,
+  AlertTriangle
 } from "lucide-react";
 import Navbar from "./components/Navbar";
 import DiagnosticConsole from "./components/DiagnosticConsole";
@@ -51,6 +52,7 @@ export default function App() {
   const [formEmail, setFormEmail] = useState("");
   const [formMessage, setFormMessage] = useState("");
   const [formErrors, setFormErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionProgress, setSubmissionProgress] = useState(0);
   const [subStage, setSubStage] = useState("");
@@ -159,10 +161,8 @@ export default function App() {
 
   const handleHeroMouseLeave = () => {
     setHeroParallax({ x: 0, y: 0 });
-  };
-
-  // Simulate contact submit steps
-  const handleFormSubmit = (e: React.FormEvent) => {
+  };  // Simulate contact submit steps
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errors: typeof formErrors = {};
     if (!formName.trim()) errors.name = t.contact.errName;
@@ -177,34 +177,52 @@ export default function App() {
     }
 
     setFormErrors({});
+    setSubmitError(null);
     setIsSubmitting(true);
-    setSubmissionProgress(5);
+    setSubmissionProgress(10);
     setSubStage(t.contact.stage1);
 
     const recLog = language === "en" ? `[FORM] Query received from: ${formName}` : language === "pt" ? `[FORM] Consulta recebida de: ${formName}` : `[FORM] Consulta recibida de: ${formName}`;
-    const auditLog = language === "en" ? `[FORM] Generating unique audit ID...` : language === "pt" ? `[FORM] Gerando ID de auditoria único...` : `[FORM] Generando ID de auditoría único...`;
+    const auditLog = language === "en" ? `[FORM] Communicating with secure API...` : language === "pt" ? `[FORM] Comunicando com API segura...` : `[FORM] Comunicando con API segura...`;
     const okLog = language === "en" ? `[OK] Form submitted successfully for ${formName}.` : language === "pt" ? `[OK] Formulário enviado com sucesso para ${formName}.` : `[OK] Formulario enviado exitosamente para ${formName}.`;
 
-    // Phase 1 loader simulation
-    setTimeout(() => {
+    try {
+      // Phase 1 loader simulation
+      await new Promise(resolve => setTimeout(resolve, 600));
       setSubmissionProgress(35);
       setSubStage(t.contact.stage2);
       addTelemetryLog(recLog);
-    }, 600);
 
-    // Phase 2 loader simulation
-    setTimeout(() => {
+      // Phase 2 loader simulation
+      await new Promise(resolve => setTimeout(resolve, 600));
       setSubmissionProgress(70);
-      setSubStage(t.contact.stage3);
-      addTelemetryLog(auditLog);
-    }, 1300);
+      setSubStage(auditLog);
 
-    // Phase 3 finalization
-    setTimeout(() => {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formName,
+          email: formEmail,
+          message: formMessage
+        })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Fallo en la comunicación con el servidor.");
+      }
+
+      // Phase 3 finalization
       setSubmissionProgress(100);
+      await new Promise(resolve => setTimeout(resolve, 600));
+      
       setIsSubmitting(false);
       setSubmittedData({
-        id: "CURE-" + Math.floor(100000 + Math.random() * 900000),
+        id: "JJMC-" + Math.floor(100000 + Math.random() * 900000),
         timestamp: new Date().toLocaleTimeString(),
         name: formName,
         email: formEmail,
@@ -215,7 +233,12 @@ export default function App() {
       setFormName("");
       setFormEmail("");
       setFormMessage("");
-    }, 2200);
+    } catch (err: any) {
+      console.error("Submission error:", err);
+      setIsSubmitting(false);
+      setSubmitError(err.message || "Failed to deliver contact request.");
+      addTelemetryLog(`[ERROR] ${err.message || "Submission failed"}`);
+    }
   };
 
   const addTelemetryLog = (log: string) => {
@@ -553,6 +576,21 @@ export default function App() {
 
           {!submittedData ? (
             <form onSubmit={handleFormSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {submitError && (
+                <div className="md:col-span-2 p-5 bg-[#0e0a08] border border-[#ff5c00]/30 rounded-lg text-left flex gap-4 items-start animate-fadeIn">
+                  <div className="p-2 bg-[#ff5c00]/10 text-primary-container rounded border border-[#ff5c00]/20">
+                    <AlertTriangle size={20} />
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-white uppercase tracking-wider font-mono">
+                      {language === "en" ? "EMAIL CONFIGURATION REQUIRED" : language === "pt" ? "CONFIGURAÇÃO POR CONFIGURAR" : "CONFIGURACIÓN DE CORREO REQUERIDA"}
+                    </h4>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {submitError}
+                    </p>
+                  </div>
+                </div>
+              )}
               {/* Full name input */}
               <div className="space-y-2 text-left">
                 <label className="block text-[10px] font-mono uppercase tracking-widest text-[#ffb59a] font-bold">
