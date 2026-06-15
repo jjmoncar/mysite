@@ -210,7 +210,16 @@ export default function App() {
         })
       });
 
-      const result = await response.json();
+      let result: any = {};
+      const contentType = response.headers.get("content-type") || "";
+      if (contentType.includes("application/json")) {
+        result = await response.json();
+      } else {
+        const textResponse = await response.text();
+        // Remove HTML tags for clean readability if it's an error page
+        const cleanText = textResponse.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().substring(0, 150);
+        throw new Error(cleanText || `Error del servidor (Status ${response.status})`);
+      }
 
       if (!response.ok || !result.success) {
         throw new Error(result.error || "Fallo en la comunicación con el servidor.");
