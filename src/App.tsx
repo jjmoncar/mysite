@@ -198,15 +198,22 @@ export default function App() {
       setSubmissionProgress(70);
       setSubStage(auditLog);
 
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Accept": "application/json"
         },
         body: JSON.stringify({
+          access_key: "05ee4e6a-0715-4995-be06-2e558c68d91f",
           name: formName,
           email: formEmail,
-          message: formMessage
+          message: formMessage,
+          subject: language === "en" 
+            ? `New contact message from ${formName} (JJSERVICES)` 
+            : language === "pt" 
+            ? `Nova mensagem de contato de ${formName} (JJSERVICES)` 
+            : `Nuevo mensaje de contacto de ${formName} (JJSERVICES)`
         })
       });
 
@@ -216,13 +223,12 @@ export default function App() {
         result = await response.json();
       } else {
         const textResponse = await response.text();
-        // Remove HTML tags for clean readability if it's an error page
         const cleanText = textResponse.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().substring(0, 150);
         throw new Error(cleanText || `Error del servidor (Status ${response.status})`);
       }
 
       if (!response.ok || !result.success) {
-        throw new Error(result.error || "Fallo en la comunicación con el servidor.");
+        throw new Error(result.message || "Fallo al enviar el mensaje a través de Web3Forms.");
       }
 
       // Phase 3 finalization
