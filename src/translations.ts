@@ -286,71 +286,71 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     servicesData: [
       {
         id: "ai",
-        title: "Artificial Intelligence",
-        icon: "Brain",
-        shortDesc: "Estrategias personalizadas de IA que se integran perfectamente con su visión de negocio, optimizando procesos y automatizando la toma de decisiones.",
-        longDesc: "Desbloqueamos el potencial corporativo a través del desarrollo e implementación de agentes de inteligencia artificial autónomos, Large Language Models (LLMs) afinados y modelos predictivos a medida. Creamos flujos inteligentes que no solo reaccionan, sino que anticipan las necesidades del mercado, automatizando la toma de decisiones compleja con precisión de cirujano.",
+        title: "Aplicaciones Web",
+        icon: "ViewQuilt",
+        shortDesc: "desarrollo de aplicaciones web robustas, rápidas y escalables con tecnologías modernas, interfaces fluidas e integraciones seguras.",
+        longDesc: "Desarrollo full-stack de primer nivel utilizando frameworks React, Node.js y arquitecturas seguras en la nube. Diseñamos sistemas interactivos que cargan al instante, optimizan los motores de búsqueda y ofrecen escalabilidad infinita para potenciar el valor del negocio.",
         capabilities: [
-          "Integración profunda de LLM y arquitecturas RAG (Retrieval-Augmented Generation)",
-          "Modelos de Visión Computacional para detección de anomalías en tiempo real",
-          "Sistemas predictivos para optimización de inventarios y previsión financiera",
-          "Agentes autónomos inteligentes enfocados en resolver jornadas complejas de clientes"
+          "Arquitecturas web SPA, SSR y SSG de alta velocidad",
+          "Integración de pasarelas de pago y APIs de terceros",
+          "Rendimiento optimizado con Core Web Vitals excelentes",
+          "Sistemas de diseño customizados y responsivos en Tailwind CSS"
         ],
         metrics: [
-          { label: "Aumento de Eficiencia", value: "+340%" },
-          { label: "Reducción de Costes", value: "-62%" },
-          { label: "Exactitud del Modelo", value: "99.8%" }
+          { label: "Velocidad de Carga", value: "< 0.5s" },
+          { label: "Optimización SEO", value: "100%" },
+          { label: "Disponibilidad", value: "99.99%" }
         ],
         caseStudy: {
-          client: "AeroSpace Tech Corp",
-          challenge: "Analizar gigabytes de telemetría diaria para prever el desgaste de turbinas y reducir paradas no programadas sumamente costosas.",
-          outcome: "Implementamos un motor predictivo con LSTM que redujo en un 45% el tiempo de inactividad operacional e identificó fallas 4 días antes."
+          client: "eCommerce Elite",
+          challenge: "Migrar un portal lento a una estructura moderna para mejorar la conversión de ventas y el posicionamiento en buscadores.",
+          outcome: "Desarrollamos una SPA en React ultrarrápida que duplicó el tráfico orgánico y aumentó las transacciones exitosas en un 64%."
         }
       },
       {
         id: "uiux",
-        title: "UI/UX Design",
-        icon: "ViewQuilt",
-        shortDesc: "Interfaces cinemáticas y experiencias de usuario diseñadas para la precisión tecnológica, combinando estética futurista con usabilidad intuitiva.",
-        longDesc: "Construimos puentes digitales perfectos entre marcas innovadoras y sus usuarios. Nuestra filosofía de diseño combina la sofisticación de la estética cyberpunk/glassmorphic y las microinteracciones responsivas con los requisitos de accesibilidad a nivel global. Diseñamos consolas que convierten grandes volúmenes de datos en flujos inteligibles y sumamente atractivos.",
+        title: "Avatares Hiperrealistas",
+        icon: "Brain",
+        shortDesc: "creación de avatares hiperrealistas interactivos con fidelidad excepcional para asistencia inteligente y experiencias virtuales inmersivas.",
+        longDesc: "Desarrollamos avatares 3D interactivos con IA integrados en tiempo real para asistencia virtual, entornos inmersivos de realidad virtual/aumentada y marketing digital de vanguardia. Fusionamos modelado con expresiones fluidas y sincronización labial automática asistida por algoritmos neurales.",
         capabilities: [
-          "Prototipado interactivo de alta fidelidad y sistemas de diseño globales y robustos",
-          "Estudios cognitivos y rutas con mínima fricción para operadores en misiones críticas",
-          "Interfaces inmersivas con soporte de temas dinámicos y micro-animaciones físicas",
-          "Optimización de diseño extrema para pantallas y formatos múltiples"
+          "Modelado y texturizado 3D de alta definición e interactivo",
+          "Sincronización labial fluida y generación de voz neural",
+          "Integración multiplataforma en entornos web, móviles e inmersivos",
+          "Motores de IA conversacional para interacción autónoma en tiempo real"
         ],
         metrics: [
-          { label: "Engagement de Usuario", value: "+180%" },
-          { label: "Velocidad de Onboarding", value: "< 3 min" },
-          { label: "Conversión de Clicks", value: "+4.2x" }
+          { label: "Fidelidad Visual", value: "4K UHD" },
+          { label: "Latencia de Respuesta", value: "< 150ms" },
+          { label: "Retención del Cliente", value: "+85%" }
         ],
         caseStudy: {
-          client: "Vortex Analytics",
-          challenge: "Rediseñar un denso panel legacy saturado de tablas y logs incomprensibles para que los gerentes de operaciones puedan realizar auditorías de salud de la red en segundos.",
-          outcome: "Creamos un panel Vortex interactivo centrado en diseño cinemático estructurado por datos, elevando la retención diaria de usuarios un 94%."
+          client: "Fintech Asistencia Virtual",
+          challenge: "Humanizar el servicio de soporte al cliente con un avatar 3D conversacional inteligente que resuelva dudas en tiempo real.",
+          outcome: "Creamos un avatar interactivo ultra-realista capaz de procesar y responder consultas comunes con lenguaje natural de forma instantánea."
         }
       },
       {
         id: "cloud",
-        title: "Cloud Architecture",
+        title: "Google Play & Pi Network",
         icon: "CloudSync",
-        shortDesc: "Arquitecturas escalables y resilientes preparadas para el futuro, garantizando alto rendimiento y seguridad en ecosistemas de datos masivos.",
-        longDesc: "Concebimos y ejecutamos infraestructuras en la nube modernas de alta escalabilidad bajo demandas de millones de peticiones por segundo. Adoptamos paradigmas multirregión con redundancia activa y tolerancia a fallos geográficos completos. Diseñamos firewalls inteligentes con respuesta automatizada ante ciberataques.",
+        shortDesc: "desarrollo de aps para Google Play Store y Dapps para Pi Network con integración nativa, blockchain y Web3 descentralizada.",
+        longDesc: "Ofrecemos servicios completos de desarrollo móvil nativo e híbrido para Google Play Store, así como contratos inteligentes y aplicaciones descentralizadas (Dapps) seguras diseñadas para desplegarse de manera nativa en el ecosistema de Pi Network (Pi Browser, Pi SDK, autenticación y transacciones Pi).",
         capabilities: [
-          "Orquestación flexible de contenedores tolerantes a fallos (Kubernetes, Serverless)",
-          "Bases de datos mundiales con latencia de replicación activa inferior a 5ms",
-          "Pipelines CI/CD automatizados con pruebas de carga y escaneos de seguridad estáticos",
-          "Estructura Zero-Trust y encriptación robusta de datos en tránsito y en reposo"
+          "Aplicaciones robustas para Google Play con rendimiento nativo",
+          "Dapps optimizadas para el navegador de Pi Network (Pi Browser)",
+          "Integración oficial con el SDK de Pi y pagos en la blockchain",
+          "Arquitecturas móviles robustas y seguras de alto nivel con encriptación"
         ],
         metrics: [
-          { label: "Uptime de Red Garantizado", value: "99.999%" },
-          { label: "Latencia de Respuesta Global", value: "< 12ms" },
-          { label: "Eficiencia de Recursos Nube", value: "Ahorro del 40%" }
+          { label: "Descargas Estimadas", value: "+500K" },
+          { label: "Sincronía Pi SDK", value: "100%" },
+          { label: "Latencia Blockchain", value: "< 2s" }
         ],
         caseStudy: {
-          client: "Bio-Sec Global",
-          challenge: "Sincronizar millones de claves de cifrado variables entre 6 supercentros internacionales en menos de 100ms por bloque.",
-          outcome: "Diseñamos un sistema de sincronización descentralizado de bajo nivel con conmutación por error automatizada que promedió 18ms entre regiones."
+          client: "Pi Pioneer Utility",
+          challenge: "Crear una mini-aplicación de servicios conectada directamente al monedero oficial de los pioneros de la red Pi.",
+          outcome: "Diseñamos una Dapp optimizada que alcanzó miles de transacciones diarias seguras con comisiones de red mínimas y una interfaz ultra fluida."
         }
       }
     ],
@@ -581,71 +581,71 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     servicesData: [
       {
         id: "ai",
-        title: "Artificial Intelligence",
-        icon: "Brain",
-        shortDesc: "Custom AI blueprints that seamlessly align with your enterprise roadmap, streamlining operations and automating high-level executive logic.",
-        longDesc: "We materialize game-changing capabilities by training context-aware autonomous agent networks, tuning enterprise LLMs via advanced RAG paradigms, and compiling sub-millisecond predictive modules. We automate complex workflows with math-proven precision.",
+        title: "Web Applications",
+        icon: "ViewQuilt",
+        shortDesc: "development of robust, fast, and scalable web applications leveraging modern frameworks, fluid interfaces, and secure integrations.",
+        longDesc: "Elite full-stack development using frameworks like React, Node.js, and secure cloud environments. We design interactive systems that load instantly, optimize search engines, and offer infinite scalability to empower business value.",
         capabilities: [
-          "Intense RAG architecture design and cognitive document parsing networks",
-          "Advanced computer vision pipelines for real-time edge processing and quality auditing",
-          "Deep predictive models mapped for capital allocation and logistical bottlenecks",
-          "Multi-agent task force coordination engines handling multi-tiered user requests"
+          "High-speed SPA, SSR, and SSG web architecture",
+          "Payment gateway integration and secure third-party APIs",
+          "Performance optimization with excellent Core Web Vitals",
+          "Custom and responsive design systems in Tailwind CSS"
         ],
         metrics: [
-          { label: "Flow Efficiency Boost", value: "+340%" },
-          { label: "Infrastructure Savings", value: "-62%" },
-          { label: "Model Confidence Level", value: "99.8%" }
+          { label: "Loading Speed", value: "< 0.5s" },
+          { label: "SEO Optimization", value: "100%" },
+          { label: "Disponibility", value: "99.99%" }
         ],
         caseStudy: {
-          client: "AeroSpace Tech Corp",
-          challenge: "Streamline structural turbine degradation forecasting across thousands of sensory vectors to replace legacy schedule-based operations.",
-          outcome: "Engineered an LSTM anomaly detector that cut operational maintenance latency by 45%, warning of failures 4 days in advance."
+          client: "eCommerce Elite",
+          challenge: "Migrating a slow legacy portal to a modern tech stack to improve sales conversion rates and search motor listings.",
+          outcome: "Developed an ultra-fast React SPA that doubled organic search traffic and increased transaction success rates by 64%."
         }
       },
       {
         id: "uiux",
-        title: "UI/UX Design",
-        icon: "ViewQuilt",
-        shortDesc: "Cinematic, high-definition user flows optimized for precision engineering, seamlessly marrying aesthetic depth with ergonomic, intuitive UI structures.",
-        longDesc: "We build intuitive human-machine interfaces of unmatched aesthetic caliber. Our philosophy merges cyberpunk neon geometries, layered glassmorphism surfaces, and smooth hardware physical animations. We make dense, complex telemetry logs immediately comprehensible and highly responsive.",
+        title: "Hyper-realistic Avatars",
+        icon: "Brain",
+        shortDesc: "creation of interactive hyper-realistic avatars with exceptional fidelity to power intelligent support and virtual spatial experiences.",
+        longDesc: "We design and develop conversational 3D AI avatars integrated in real-time to power custom virtual assistants, immersive VR/AR workspaces, and next-gen retail spaces. We blend premium modeling with natural dynamic expressions and automated lip-syncing.",
         capabilities: [
-          "High-fidelity responsive prototyping and unified design systems",
-          "Cognitive friction auditing and UX path-pointing for mission-critical software",
-          "Fully accessible reactive dark themes with hardware-accelerated animations",
-          "Pixel-perfect cross-platform fluidity supporting complex layout setups"
+          "High-definition, interactive 3D modeling and rendering",
+          "Fluid lipsync mapping and advanced neural speaker voice generation",
+          "Cross-platform deployment across web browsers, mobile displays, and headsets",
+          "Conversational engine tuning to command autonomous interactions under natural speech"
         ],
         metrics: [
-          { label: "User Daily Engagement", value: "+180%" },
-          { label: "Average Onboarding Time", value: "< 3 mins" },
-          { label: "Visual System CTR", value: "+4.2x" }
+          { label: "Visual Fidelity", value: "4K UHD" },
+          { label: "Decision Latency", value: "< 150ms" },
+          { label: "Customer Engagement", value: "+85%" }
         ],
         caseStudy: {
-          client: "Vortex Analytics",
-          challenge: "Convert a dense, chaotic grid system into a visual dashboard that command staff can read and triage accurately inside seconds.",
-          outcome: "Designed a dark, telemetry-driven responsive dashboard console, producing a 94% increase in operator tool retention metrics."
+          client: "Fintech Virtual Assistance",
+          challenge: "Humanize user support channels with an interactive 3D companion capable of guiding customers through active transfers in real-time.",
+          outcome: "Engineered an ultra-real avatar assistant resolving common support tickets seamlessly with pleasant natural conversational speech."
         }
       },
       {
         id: "cloud",
-        title: "Cloud Architecture",
+        title: "Google Play & Pi Network",
         icon: "CloudSync",
-        shortDesc: "Resilient, highly scalable global server infrastructures engineered to safeguard high-volume telemetry and minimize global lag.",
-        longDesc: "We assemble world-scale container matrices capable of supporting millions of concurrent transactional writes without localized choke points. Our environments feature multi-region active redundancy, immediate edge replication, and network partition safe failovers safeguarded by intelligent cloud firewalls.",
+        shortDesc: "development of apps for Google Play Store and Dapps for Pi Network with native deployment, secure ledger solutions, and Web3 frameworks.",
+        longDesc: "Full-scale mobile app compilation certified for Google Play Store distribution alongside highly secure decentralized applications (Dapps) built for the Pi Network Web3 ecosystem (Pi Browser, Pi SDK, secure authentication, and Pi blockchain payments).",
         capabilities: [
-          "Auto-scaling high-performance Kubernetes and serverless deployments",
-          "Global active-active multi-region databases committing in < 5ms everywhere",
-          "Strict automated DevSecOps pipelines integrating static and dynamic auditing",
-          "Rigid Zero-Trust security layers utilizing robust encryption standards"
+          "High-performance mobile application architectures for Google Play",
+          "Decentralized apps custom tailored for the Pi Browser",
+          "Official Pi SDK implementation including secure cryptocurrency transactions",
+          "Secured end-to-end user encryption on all portable structures"
         ],
         metrics: [
-          { label: "Guaranteed Global Uptime", value: "99.999%" },
-          { label: "Under-load Response Latency", value: "< 12ms" },
-          { label: "Cloud Spend Optimizations", value: "40% saved" },
+          { label: "Estimated Downloads", value: "+500K" },
+          { label: "Pi SDK Sincronization", value: "100%" },
+          { label: "Blockchain Latency", value: "< 2s" }
         ],
         caseStudy: {
-          client: "Bio-Sec Global",
-          challenge: "Instantly distribute encrypted system tokens across 6 major global datacenters with a hard target under 100ms per packet block.",
-          outcome: "Architected a peer-to-peer secure ledger layer with smart routing nodes that completed cross-region broadcasts in 18ms."
+          client: "Pi Pioneer Utility",
+          challenge: "Assemble a lightweight mobile utility directly integrating with Pi network wallets to let active pioneers execute low-fee transactions.",
+          outcome: "Deployed a decentralized application processing thousands of secure daily Pi transactions securely on the Pi mainnet block ledger."
         }
       }
     ],
@@ -876,71 +876,71 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
     servicesData: [
       {
         id: "ai",
-        title: "Artificial Intelligence",
-        icon: "Brain",
-        shortDesc: "Estratégias personalizadas de IA que se integram perfeitamente com sua visão de negócio, otimizando processos e automatizando a tomada de decisões.",
-        longDesc: "Desbloqueamos o potencial corporativo através do desenvolvimento e implementação de agentes de inteligência artificial autônomos, Large Language Models (LLMs) afinados e modelos preditivos sob medida. Criamos fluxos inteligentes que não apenas reagem, mas antecipam as necessidades do mercado, automatizando tomadas de decisões complexas com precisão cirúrgica.",
+        title: "Aplicações Web",
+        icon: "ViewQuilt",
+        shortDesc: "desenvolvimento de aplicações web robustas, rápidas e escaláveis com tecnologias modernas, interfaces fluidas e integrações seguras.",
+        longDesc: "Desenvolvimento full-stack de alto padrão utilizando React, Node.js e arquiteturas de nuvem seguras. Projetamos sistemas interativos com tempos de carregamento instantâneos, SEO otimizado e escalabilidade infinita para impulsionar o seu negócio digital.",
         capabilities: [
-          "Integração profunda de LLMs e arquiteturas RAG (Retrieval-Augmented Generation)",
-          "Modelos de Visão Computacional para detecção de anomalias em tempo real",
-          "Sistemas preditivos para otimização de suprimentos e previsão financeira",
-          "Agentes inteligentes autônomos focados em resolução de jornadas complexas de clientes"
+          "Arquiteturas web SPA, SSR e SSG de ultravelocidade",
+          "Integração de gateways de pagamento e APIs de terceiros",
+          "Otimização extrema de desempenho sob Core Web Vitals",
+          "Sistemas de design customizados e responsivos em Tailwind CSS"
         ],
         metrics: [
-          { label: "Aumento de Eficiência", value: "+340%" },
-          { label: "Redução de Custos de Processamento", value: "-62%" },
-          { label: "Acurácia de Predição de Modelos", value: "99.8%" }
+          { label: "Velocidade de Carga", value: "< 0.5s" },
+          { label: "Otimização SEO", value: "100%" },
+          { label: "Disponibilidade", value: "99.99%" }
         ],
         caseStudy: {
-          client: "AeroSpace Tech Corp",
-          challenge: "Analisar gigabytes de telemetria diária para prever fadiga de turbinas e reduzir paradas não programadas altamente custosas.",
-          outcome: "Implementamos um motor preditivo com LSTM que reduziu em 45% o tempo de inatividade operacional e identificou anomalias 4 dias antes de falhas mecânicas."
+          client: "eCommerce Elite",
+          challenge: "Migrar um portal de e-commerce lento para uma arquitetura moderna para aumentar as conversões de vendas e o rank de busca.",
+          outcome: "Desenvolvemos uma SPA de alto desempenho com React reduzindo latência pela metade, o que elevou o tráfego orgânico global em 100%."
         }
       },
       {
         id: "uiux",
-        title: "UI/UX Design",
-        icon: "ViewQuilt",
-        shortDesc: "Interfaces cinemáticas e experiências de usuário desenhadas para a precisão tecnológica, combinando estética futurista com usabilidade intuitiva.",
-        longDesc: "Construímos pontes digitais impecáveis entre marcas inovadoras e seus usuários. A nossa filosofia de design alia a sofisticação da estética sci-fi, glassmorphism e micro-interações responsivas ao rigor absoluto de acessibilidade mundial. Criamos dashboards que transformam montanhas de dados em diagramas altamente scannáveis e visualmente arrebatadores.",
+        title: "Avatares Hiperrealistas",
+        icon: "Brain",
+        shortDesc: "criação de avatares hiperrealistas interativos com fidelidade excepcional para assistência inteligente e experiências virtuais imersivas.",
+        longDesc: "Desenvolvemos avatares virtuais 3D inteligentes e altamente interativos em tempo real para atendimento ao cliente, marketing futurista e plataformas de metaverso. Integramos expressões faciais realistas com dublagem automática gerada por redes neurais de ponta.",
         capabilities: [
-          "Prototipagem interativa em alta fidelidade e design de sistemas globais robustos",
-          "Estudos de cognição e caminhos de menor atrito para operadores em missões críticas",
-          "Interfaces imersivas com suporte a temas dinâmicos e micro-animações físicas",
-          "Otimização visual extrema para exibições em múltiplos formatos e dispositivos"
+          "Modelagem e texturização 3D de alta fidelidade e interativa",
+          "Sincronização labial fluida e geração de áudio neural conversacional",
+          "Integração multiplataforma para ambientes digitais, web e móveis",
+          "Ativadores autônomos de conversa em tempo real orientados por IA"
         ],
         metrics: [
-          { label: "Engajamento do Usuário", value: "+180%" },
-          { label: "Velocidade de Onboarding", value: "Menos de 3min" },
-          { label: "Taxa de Conversão de Cliques", value: "+4.2x" }
+          { label: "Fidelidade Visual", value: "4K UHD" },
+          { label: "Latência de Resposta", value: "< 150ms" },
+          { label: "Engajamento do Cliente", value: "+85%" }
         ],
         caseStudy: {
-          client: "Vortex Analytics",
-          challenge: "Redesenhar uma plataforma legada densa cheia de tabelas e logs incompreensíveis para que gerentes de topo pudessem auditar a integridade operacional rapidamente.",
-          outcome: "Criamos a interface do Vortex Dashboard focada em design cinemático guiado por dados, elevando a retenção diária de clientes em 94%."
+          client: "Fintech Assistência Virtual",
+          challenge: "Humanizar o atendimento ao cliente com um assistente virtual 3D capaz de compreender intenções sob linguagem natural e acionar respostas.",
+          outcome: "Desenvolvemos um avatar realista conversacional integrado a canais de voz e vídeo, reduzindo a taxa de abandono do suporte em 45%."
         }
       },
       {
         id: "cloud",
-        title: "Cloud Architecture",
+        title: "Google Play & Pi Network",
         icon: "CloudSync",
-        shortDesc: "Arquiteturas escaláveis e resilientes preparadas para o futuro, garantindo alto rendimento e segurança em ecossistemas de dados masivas.",
-        longDesc: "Concebemos e executamos infraestruturas modernas que escalam sozinhas sob demanda de milhões de acessos por segundo. Adotamos o paradigma multi-região nativo, alta redundância tolerante a falhas geográficas e entrega segura por CDN inteligente de latência nula. Garantimos proteção permanente contra ameaças digitais usando firewalls autoreativos baseados em IA.",
+        shortDesc: "desenvolvimento de aps para Google Play Store e Dapps para Pi Network com integração nativa, blockchain e Web3 descentralizada.",
+        longDesc: "Desenvolvimento móvel nativo e híbrido de ponta para a Google Play Store, acompanhado de soluções de Web3 seguras e Dapps prontas para o Pi Browser, incluindo autenticação do Pi SDK e microtransações fluidas com taxas garantidas na blockchain Pi.",
         capabilities: [
-          "Orquestração flexível de contêineres resilientes (Kubernetes, Serverless)",
-          "Bancos de dados mundiais com replicação ativa de latência abaixo de 5ms",
-          "Pipeline CI/CD automatizado com testes térmicos e estáticos embutidos",
-          "Segurança Zero Trust e encriptação ponta a ponta em trânsito e repouso"
+          "Aplicativos responsivos e nativos publicados na Google Play",
+          "Aplicações descentralizadas otimizadas para o Pi Browser",
+          "Integração segura do ecossistema Pi SDK (Pi payments e autenticação)",
+          "Protocolos criptográficos rígidos para segurança móvel abrangente"
         ],
         metrics: [
-          { label: "Tempo de Uptime Garantido", value: "99.999%" },
-          { label: "Tempo de Resposta Global", value: "< 12ms" },
-          { label: "Redução de Desperdício em Cloud", value: "Otimização de 40%" }
+          { label: "Downloads Estimados", value: "+500K" },
+          { label: "Sincronização Pi SDK", value: "100%" },
+          { label: "Latência da Blockchain", value: "< 2s" }
         ],
         caseStudy: {
-          client: "Bio-Sec Global",
-          challenge: "Sincronizar bilhões de chaves de criptografia geradas dinamicamente entre 6 centros de processamento internacionais em menos de 100ms por bloco.",
-          outcome: "Desenhamos uma arquitetura descentralizada de baixo nível com redundância automatizada que atingiu sincronia em 18ms em média, com tolerância total contra partições de rede."
+          client: "Pi Pioneer Utility",
+          challenge: "Projetar uma mini-aplicação utilitária móvel ligando os pioneiros da rede ao monedero de pagamentos de forma simplificada.",
+          outcome: "Criamos uma Dapp otimizada registrando milhares de transações seguras no ledger blockchain da Pi Network em menos de dois segundos."
         }
       }
     ],

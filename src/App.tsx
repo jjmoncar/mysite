@@ -22,6 +22,7 @@ import DiagnosticConsole from "./components/DiagnosticConsole";
 import ServiceModal from "./components/ServiceModal";
 import ProjectDrawer from "./components/ProjectDrawer";
 import LegalModal from "./components/LegalModal";
+import TiltCard from "./components/TiltCard";
 import { ServiceDetail, ProjectDetail } from "./types";
 import { TRANSLATIONS, Language } from "./translations";
 
@@ -406,39 +407,38 @@ export default function App() {
           {/* Core Services Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {servicesData.map((service) => (
-              <div
-                key={service.id}
-                className="glass-panel p-8 md:p-10 rounded-lg group neon-glow flex flex-col justify-between hover:scale-[1.01] duration-300"
-              >
-                <div>
-                  {/* Glowing icon circle */}
-                  <div className="mb-6 p-4 w-16 h-16 rounded-lg bg-black/40 border border-primary-container/20 flex items-center justify-center transition-transform group-hover:scale-110">
-                    {renderServiceIcon(service.icon)}
+              <TiltCard key={service.id} className="group">
+                <div className="glass-panel p-8 md:p-10 rounded-lg neon-glow flex flex-col justify-between h-full bg-[#0a0706]/90 border border-outline-variant/10 transition-colors duration-300">
+                  <div>
+                    {/* Glowing icon circle */}
+                    <div className="mb-6 p-4 w-16 h-16 rounded-lg bg-black/40 border border-primary-container/20 flex items-center justify-center transition-transform group-hover:scale-110">
+                      {renderServiceIcon(service.icon)}
+                    </div>
+
+                    <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#ffb59a] transition-colors leading-tight">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-[#e4beb1]/80 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                      {service.shortDesc}
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-[#ffb59a] transition-colors leading-tight">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-[#e4beb1]/80 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                    {service.shortDesc}
-                  </p>
+                  <div>
+                    <div className="h-[1px] w-full bg-outline-variant/20 mb-6" />
+                    <button
+                      onClick={() => setSelectedService(service)}
+                      className="group/link text-xs tracking-widest text-[#ff5c00] font-mono font-bold flex items-center gap-2 cursor-pointer hover:text-white transition-colors"
+                    >
+                      {t.services.learnMore}{" "}
+                      <ArrowRight
+                        size={14}
+                        className="transition-transform group-hover/link:translate-x-2"
+                      />
+                    </button>
+                  </div>
                 </div>
-
-                <div>
-                  <div className="h-[1px] w-full bg-outline-variant/20 mb-6" />
-                  <button
-                    onClick={() => setSelectedService(service)}
-                    className="group/link text-xs tracking-widest text-[#ff5c00] font-mono font-bold flex items-center gap-2 cursor-pointer hover:text-white transition-colors"
-                  >
-                    {t.services.learnMore}{" "}
-                    <ArrowRight
-                      size={14}
-                      className="transition-transform group-hover/link:translate-x-2"
-                    />
-                  </button>
-                </div>
-              </div>
+              </TiltCard>
             ))}
           </div>
         </div>
