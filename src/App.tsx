@@ -17,6 +17,7 @@ import {
   Code,
   AlertTriangle
 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import DiagnosticConsole from "./components/DiagnosticConsole";
 import ServiceModal from "./components/ServiceModal";
@@ -830,6 +831,9 @@ export default function App() {
         onClose={() => setLegalMode(null)}
         t={t.legal}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
